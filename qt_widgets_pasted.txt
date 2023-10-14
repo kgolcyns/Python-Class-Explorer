@@ -1,0 +1,622 @@
+C:\Users\kgolcyns\Qt Python Textbook\Class Explorer 2>python qt_classes.py
+
+╔═════════╗
+║ QWidget ║
+╚═════════╝
+    ╱╲
+   ╱  ╲
+    ││
+    ││
+
+┌────────────────────────────────────────────────────────────┐
+│                      QAbstractButton                       │
+├────────────────────────────────────────────────────────────┤
+│animateClick        iconSize               setCheckable     │
+│autoExclusive       isCheckable            setChecked       │
+│autoRepeat          isChecked              setDown          │
+│autoRepeatDelay     isDown                 setIcon          │
+│autoRepeatInterval  nextCheckState         setIconSize      │
+│checkStateSet       pressed                setShortcut      │
+│click               released               setText          │
+│clicked             setAutoExclusive       shortcut         │
+│group               setAutoRepeat          text             │
+│hitButton           setAutoRepeatDelay     toggle           │
+│icon                setAutoRepeatInterval  toggled          │
+└────────────────────────────────────────────────────────────┘
+
+
+┌────────────────────────────────────────────────────────────┐
+│                           QFrame                           │
+├────────────────────────────────────────────────────────────┤
+│Box          Shape        frameRect        setFrameRect     │
+│HLine        Shape_Mask   frameShadow      setFrameShadow   │
+│NoFrame      StyleMask    frameShape       setFrameShape    │
+│Panel        StyledPanel  frameStyle       setFrameStyle    │
+│Plain        Sunken       frameWidth       setLineWidth     │
+│Raised       VLine        initStyleOption  setMidLineWidth  │
+│Shadow       WinPanel     lineWidth                         │
+│Shadow_Mask  drawFrame    midLineWidth                      │
+└────────────────────────────────────────────────────────────┘
+
+
+┌──────────────────────────────────────────────────┐
+│                 QAbstractSlider                  │
+├──────────────────────────────────────────────────┤
+│SliderAction             repeatAction             │
+│SliderChange             setInvertedAppearance    │
+│SliderMove               setInvertedControls      │
+│SliderNoAction           setMaximum               │
+│SliderOrientationChange  setMinimum               │
+│SliderPageStepAdd        setOrientation           │
+│SliderPageStepSub        setPageStep              │
+│SliderRangeChange        setRange                 │
+│SliderSingleStepAdd      setRepeatAction          │
+│SliderSingleStepSub      setSingleStep            │
+│SliderStepsChange        setSliderDown            │
+│SliderToMaximum          setSliderPosition        │
+│SliderToMinimum          setTracking              │
+│SliderValueChange        setValue                 │
+│actionTriggered          singleStep               │
+│hasTracking              sliderChange             │
+│invertedAppearance       sliderMoved              │
+│invertedControls         sliderPosition           │
+│isSliderDown             sliderPressed            │
+│maximum                  sliderReleased           │
+│minimum                  triggerAction            │
+│orientation              value                    │
+│pageStep                 valueChanged             │
+│rangeChanged                                      │
+└──────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────┐
+│                 QAbstractSpinBox                 │
+├──────────────────────────────────────────────────┤
+│ButtonSymbols           isReadOnly                │
+│CorrectToNearestValue   keyboardTracking          │
+│CorrectToPreviousValue  lineEdit                  │
+│CorrectionMode          selectAll                 │
+│NoButtons               setAccelerated            │
+│PlusMinus               setAlignment              │
+│StepDownEnabled         setButtonSymbols          │
+│StepEnabled             setCorrectionMode         │
+│StepEnabledFlag         setFrame                  │
+│StepNone                setGroupSeparatorShown    │
+│StepUpEnabled           setKeyboardTracking       │
+│UpDownArrows            setLineEdit               │
+│alignment               setReadOnly               │
+│buttonSymbols           setSpecialValueText       │
+│clear                   setWrapping               │
+│correctionMode          specialValueText          │
+│editingFinished         stepBy                    │
+│fixup                   stepDown                  │
+│hasAcceptableInput      stepEnabled               │
+│hasFrame                stepUp                    │
+│initStyleOption         text                      │
+│interpretText           validate                  │
+│isAccelerated           wrapping                  │
+│isGroupSeparatorShown                             │
+└──────────────────────────────────────────────────┘
+
+
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                QCalendarWidget                                 │
+├────────────────────────────────────────────────────────────────────────────────┤
+│HorizontalHeaderFormat  isDateEditEnabled          setMaximumDate               │
+│ISOWeekNumbers          isGridVisible              setMinimumDate               │
+│LongDayNames            isNavigationBarVisible     setNavigationBarVisible      │
+│NoHorizontalHeader      maximumDate                setSelectedDate              │
+│NoSelection             minimumDate                setSelectionMode             │
+│NoVerticalHeader        monthShown                 setVerticalHeaderFormat      │
+│SelectionMode           paintCell                  setWeekdayTextFormat         │
+│ShortDayNames           selectedDate               showNextMonth                │
+│SingleLetterDayNames    selectionChanged           showNextYear                 │
+│SingleSelection         selectionMode              showPreviousMonth            │
+│VerticalHeaderFormat    setCurrentPage             showPreviousYear             │
+│activated               setDateEditAcceptDelay     showSelectedDate             │
+│clicked                 setDateEditEnabled         showToday                    │
+│currentPageChanged      setDateRange               updateCell                   │
+│dateEditAcceptDelay     setDateTextFormat          updateCells                  │
+│dateTextFormat          setFirstDayOfWeek          verticalHeaderFormat         │
+│firstDayOfWeek          setGridVisible             weekdayTextFormat            │
+│headerTextFormat        setHeaderTextFormat        yearShown                    │
+│horizontalHeaderFormat  setHorizontalHeaderFormat                               │
+└────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌──────────────────────────────┐
+│           QDialog            │
+├──────────────────────────────┤
+│Accepted    isSizeGripEnabled │
+│DialogCode  open              │
+│Rejected    reject            │
+│accept      rejected          │
+│accepted    result            │
+│done        setModal          │
+│exec        setResult         │
+│exec_       setSizeGripEnabled│
+│finished                      │
+└──────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                            QComboBox                            │
+├─────────────────────────────────────────────────────────────────┤
+│AdjustToContents                       itemData                  │
+│AdjustToContentsOnFirstShow            itemDelegate              │
+│AdjustToMinimumContentsLength          itemIcon                  │
+│AdjustToMinimumContentsLengthWithIcon  itemText                  │
+│InsertAfterCurrent                     lineEdit                  │
+│InsertAlphabetically                   maxCount                  │
+│InsertAtBottom                         maxVisibleItems           │
+│InsertAtCurrent                        minimumContentsLength     │
+│InsertAtTop                            model                     │
+│InsertBeforeCurrent                    modelColumn               │
+│InsertPolicy                           removeItem                │
+│NoInsert                               rootModelIndex            │
+│SizeAdjustPolicy                       setCompleter              │
+│__len__                                setCurrentIndex           │
+│activated                              setCurrentText            │
+│addItem                                setDuplicatesEnabled      │
+│addItems                               setEditText               │
+│clear                                  setEditable               │
+│clearEditText                          setFrame                  │
+│completer                              setIconSize               │
+│count                                  setInsertPolicy           │
+│currentData                            setItemData               │
+│currentIndex                           setItemDelegate           │
+│currentIndexChanged                    setItemIcon               │
+│currentText                            setItemText               │
+│currentTextChanged                     setLineEdit               │
+│duplicatesEnabled                      setMaxCount               │
+│editTextChanged                        setMaxVisibleItems        │
+│findData                               setMinimumContentsLength  │
+│findText                               setModel                  │
+│hasFrame                               setModelColumn            │
+│hidePopup                              setRootModelIndex         │
+│highlighted                            setSizeAdjustPolicy       │
+│iconSize                               setValidator              │
+│initStyleOption                        setView                   │
+│insertItem                             showPopup                 │
+│insertItems                            sizeAdjustPolicy          │
+│insertPolicy                           validator                 │
+│insertSeparator                        view                      │
+│isEditable                                                       │
+└─────────────────────────────────────────────────────────────────┘
+
+
+┌────────────────────────────────────────┐
+│             QDesktopWidget             │
+├────────────────────────────────────────┤
+│availableGeometry     screenCount       │
+│isVirtualDesktop      screenCountChanged│
+│primaryScreen         screenGeometry    │
+│primaryScreenChanged  screenNumber      │
+│resized               workAreaResized   │
+│screen                                  │
+└────────────────────────────────────────┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+┌───────────────────────────────────────────────────────┐
+│                    QDialogButtonBox                   │
+├───────────────────────────────────────────────────────┤
+│Abort            No               YesToAll             │
+│AcceptRole       NoButton         accepted             │
+│ActionRole       NoRole           addButton            │
+│Apply            NoToAll          button               │
+│ApplyRole        Ok               buttonRole           │
+│ButtonLayout     Open             buttons              │
+│ButtonRole       RejectRole       centerButtons        │
+│Cancel           Reset            clear                │
+│Close            ResetRole        clicked              │
+│DestructiveRole  RestoreDefaults  helpRequested        │
+│Discard          Retry            orientation          │
+│GnomeLayout      Save             rejected             │
+│Help             SaveAll          removeButton         │
+│HelpRole         StandardButton   setCenterButtons     │
+│Ignore           StandardButtons  setOrientation       │
+│InvalidRole      WinLayout        setStandardButtons   │
+│KdeLayout        Yes              standardButton       │
+│MacLayout        YesRole          standardButtons      │
+└───────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────┐
+│                 QDockWidget                 │
+├─────────────────────────────────────────────┤
+│AllDockWidgetFeatures       initStyleOption  │
+│DockWidgetClosable          isAreaAllowed    │
+│DockWidgetFeature           isFloating       │
+│DockWidgetFeatures          setAllowedAreas  │
+│DockWidgetFloatable         setFeatures      │
+│DockWidgetMovable           setFloating      │
+│DockWidgetVerticalTitleBar  setTitleBarWidget│
+│NoDockWidgetFeatures        setWidget        │
+│allowedAreas                titleBarWidget   │
+│allowedAreasChanged         toggleViewAction │
+│dockLocationChanged         topLevelChanged  │
+│features                    visibilityChanged│
+│featuresChanged             widget           │
+└─────────────────────────────────────────────┘
+
+
+┌────────────────┐  ┌────────────────────┐
+│  QFocusFrame   │  │  QKeySequenceEdit  │
+├────────────────┤  ├────────────────────┤
+│initStyleOption │  │clear               │
+│setWidget       │  │editingFinished     │
+│widget          │  │keySequence         │
+└────────────────┘  │keySequenceChanged  │
+                    │setKeySequence      │
+                    └────────────────────┘
+
+┌────────────────────────────────────────┐
+│               QGroupBox                │
+├────────────────────────────────────────┤
+│alignment        isFlat        setTitle │
+│clicked          setAlignment  title    │
+│initStyleOption  setCheckable  toggled  │
+│isCheckable      setChecked             │
+│isChecked        setFlat                │
+└────────────────────────────────────────┘
+
+
+
+
+
+
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                 QLineEdit                                 │
+├───────────────────────────────────────────────────────────────────────────┤
+│ActionPosition             displayText           selectionStart            │
+│EchoMode                   dragEnabled           setAlignment              │
+│LeadingPosition            echoMode              setClearButtonEnabled     │
+│NoEcho                     editingFinished       setCompleter              │
+│Normal                     end                   setCursorMoveStyle        │
+│Password                   getTextMargins        setCursorPosition         │
+│PasswordEchoOnEdit         hasAcceptableInput    setDragEnabled            │
+│TrailingPosition           hasFrame              setEchoMode               │
+│alignment                  hasSelectedText       setFrame                  │
+│backspace                  home                  setInputMask              │
+│clear                      initStyleOption       setMaxLength              │
+│completer                  inputMask             setModified               │
+│copy                       insert                setPlaceholderText        │
+│createStandardContextMenu  isClearButtonEnabled  setReadOnly               │
+│cursorBackward             isModified            setSelection              │
+│cursorForward              isReadOnly            setText                   │
+│cursorMoveStyle            isRedoAvailable       setTextMargins            │
+│cursorPosition             isUndoAvailable       setValidator              │
+│cursorPositionAt           maxLength             text                      │
+│cursorPositionChanged      paste                 textChanged               │
+│cursorRect                 placeholderText       textEdited                │
+│cursorWordBackward         redo                  textMargins               │
+│cursorWordForward          returnPressed         undo                      │
+│cut                        selectAll             validator                 │
+│del_                       selectedText                                    │
+│deselect                   selectionChanged                                │
+└───────────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                QMainWindow                                │
+├───────────────────────────────────────────────────────────────────────────┤
+│AllowNestedDocks  insertToolBarBreak     setMenuBar                        │
+│AllowTabbedDocks  isAnimated             setMenuWidget                     │
+│AnimatedDocks     isDockNestingEnabled   setStatusBar                      │
+│DockOption        isSeparator            setTabPosition                    │
+│DockOptions       menuBar                setTabShape                       │
+│ForceTabbedDocks  menuWidget             setToolButtonStyle                │
+│GroupedDragging   removeDockWidget       setUnifiedTitleAndToolBarOnMac    │
+│VerticalTabs      removeToolBar          splitDockWidget                   │
+│addDockWidget     removeToolBarBreak     statusBar                         │
+│addToolBar        resizeDocks            tabPosition                       │
+│addToolBarBreak   restoreDockWidget      tabShape                          │
+│centralWidget     restoreState           tabifiedDockWidgetActivated       │
+│corner            saveState              tabifiedDockWidgets               │
+│createPopupMenu   setAnimated            tabifyDockWidget                  │
+│dockOptions       setCentralWidget       takeCentralWidget                 │
+│dockWidgetArea    setCorner              toolBarArea                       │
+│documentMode      setDockNestingEnabled  toolBarBreak                      │
+│iconSize          setDockOptions         toolButtonStyle                   │
+│iconSizeChanged   setDocumentMode        toolButtonStyleChanged            │
+│insertToolBar     setIconSize            unifiedTitleAndToolBarOnMac       │
+└───────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│                QMdiSubWindow                │
+├─────────────────────────────────────────────┤
+│RubberBandMove       setKeyboardSingleStep   │
+│RubberBandResize     setOption               │
+│SubWindowOption      setSystemMenu           │
+│SubWindowOptions     setWidget               │
+│aboutToActivate      showShaded              │
+│isShaded             showSystemMenu          │
+│keyboardPageStep     systemMenu              │
+│keyboardSingleStep   testOption              │
+│mdiArea              widget                  │
+│setKeyboardPageStep  windowStateChanged      │
+└─────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                              QMenu                              │
+├─────────────────────────────────────────────────────────────────┤
+│aboutToHide     hideTearOffMenu        setActiveAction           │
+│aboutToShow     hovered                setDefaultAction          │
+│actionAt        icon                   setIcon                   │
+│actionGeometry  initStyleOption        setNoReplayFor            │
+│activeAction    insertMenu             setSeparatorsCollapsible  │
+│addMenu         insertSection          setTearOffEnabled         │
+│addSection      insertSeparator        setTitle                  │
+│addSeparator    isEmpty                setToolTipsVisible        │
+│clear           isTearOffEnabled       showTearOffMenu           │
+│columnCount     isTearOffMenuVisible   title                     │
+│defaultAction   menuAction             toolTipsVisible           │
+│exec            popup                  triggered                 │
+│exec_           separatorsCollapsible                            │
+└─────────────────────────────────────────────────────────────────┘
+
+
+┌───────────────────────────────────┐
+│              QMenuBar             │
+├───────────────────────────────────┤
+│actionAt         insertMenu        │
+│actionGeometry   insertSeparator   │
+│activeAction     isDefaultUp       │
+│addMenu          isNativeMenuBar   │
+│addSeparator     setActiveAction   │
+│clear            setCornerWidget   │
+│cornerWidget     setDefaultUp      │
+│hovered          setNativeMenuBar  │
+│initStyleOption  triggered         │
+└───────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────┐
+│                QOpenGLWidget                │
+├─────────────────────────────────────────────┤
+│NoPartialUpdate           grabFramebuffer    │
+│PartialUpdate             initializeGL       │
+│UpdateBehavior            isValid            │
+│aboutToCompose            makeCurrent        │
+│aboutToResize             paintGL            │
+│context                   resizeGL           │
+│defaultFramebufferObject  resized            │
+│doneCurrent               setFormat          │
+│format                    setUpdateBehavior  │
+│frameSwapped              updateBehavior     │
+└─────────────────────────────────────────────┘
+
+
+┌────────────────────────────────────────────────────────────┐
+│                        QProgressBar                        │
+├────────────────────────────────────────────────────────────┤
+│BottomToTop      orientation            setRange            │
+│Direction        reset                  setTextDirection    │
+│TopToBottom      resetFormat            setTextVisible      │
+│alignment        setAlignment           setValue            │
+│format           setFormat              text                │
+│initStyleOption  setInvertedAppearance  value               │
+│isTextVisible    setMaximum             valueChanged        │
+│maximum          setMinimum                                 │
+│minimum          setOrientation                             │
+└────────────────────────────────────────────────────────────┘
+
+
+
+
+
+
+┌───────────────────────────────────────────────────────────────────────────┐#pg7
+│                                  QTabBar                                  │#[415
+├───────────────────────────────────────────────────────────────────────────┤#-483]
+│ButtonPosition       expanding                     setTabTextColor         │
+│LeftSide             iconSize                      setTabToolTip           │
+│RightSide            initStyleOption               setTabWhatsThis         │
+│RoundedEast          insertTab                     setTabsClosable         │
+│RoundedNorth         isMovable                     setUsesScrollButtons    │
+│RoundedSouth         isTabEnabled                  shape                   │
+│RoundedWest          minimumTabSizeHint            tabAt                   │
+│SelectLeftTab        moveTab                       tabBarClicked           │
+│SelectPreviousTab    removeTab                     tabBarDoubleClicked     │
+│SelectRightTab       selectionBehaviorOnRemove     tabButton               │
+│SelectionBehavior    setAccessibleTabName          tabCloseRequested       │
+│Shape                setAutoHide                   tabData                 │
+│TriangularEast       setChangeCurrentOnDrag        tabIcon                 │
+│TriangularNorth      setCurrentIndex               tabInserted             │
+│TriangularSouth      setDocumentMode               tabLayoutChange         │
+│TriangularWest       setDrawBase                   tabMoved                │
+│__len__              setElideMode                  tabRect                 │
+│accessibleTabName    setExpanding                  tabRemoved              │
+│addTab               setIconSize                   tabSizeHint             │
+│autoHide             setMovable                    tabText                 │
+│changeCurrentOnDrag  setSelectionBehaviorOnRemove  tabTextColor            │
+│count                setShape                      tabToolTip              │
+│currentChanged       setTabButton                  tabWhatsThis            │
+│currentIndex         setTabData                    tabsClosable            │
+│documentMode         setTabEnabled                 usesScrollButtons       │
+│drawBase             setTabIcon                                            │
+│elideMode            setTabText                                            │
+└───────────────────────────────────────────────────────────────────────────┘
+
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                 QTabWidget                                │
+├───────────────────────────────────────────────────────────────────────────┤
+│East            currentWidget     setIconSize           tabBarClicked      │
+│North           documentMode      setMovable            tabBarDoubleClicked│
+│Rounded         elideMode         setTabBar             tabCloseRequested  │
+│South           iconSize          setTabBarAutoHide     tabIcon            │
+│TabPosition     indexOf           setTabEnabled         tabInserted        │
+│TabShape        initStyleOption   setTabIcon            tabPosition        │
+│Triangular      insertTab         setTabPosition        tabRemoved         │
+│West            isMovable         setTabShape           tabShape           │
+│__len__         isTabEnabled      setTabText            tabText            │
+│addTab          removeTab         setTabToolTip         tabToolTip         │
+│clear           setCornerWidget   setTabWhatsThis       tabWhatsThis       │
+│cornerWidget    setCurrentIndex   setTabsClosable       tabsClosable       │
+│count           setCurrentWidget  setUsesScrollButtons  usesScrollButtons  │
+│currentChanged  setDocumentMode   tabBar                widget             │
+│currentIndex    setElideMode      tabBarAutoHide                           │
+└───────────────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                             QToolBar                            │
+├─────────────────────────────────────────────────────────────────┤
+│actionAt             insertSeparator     setIconSize             │
+│actionGeometry       insertWidget        setMovable              │
+│actionTriggered      isAreaAllowed       setOrientation          │
+│addSeparator         isFloatable         setToolButtonStyle      │
+│addWidget            isFloating          toggleViewAction        │
+│allowedAreas         isMovable           toolButtonStyle         │
+│allowedAreasChanged  movableChanged      toolButtonStyleChanged  │
+│clear                orientation         topLevelChanged         │
+│iconSize             orientationChanged  visibilityChanged       │# end
+│iconSizeChanged      setAllowedAreas     widgetForAction         │# pg7
+│initStyleOption      setFloatable                                │# [415
+└─────────────────────────────────────────────────────────────────┘#- 483]
+┌──────────────────┐#pg8 [484-452]
+│  QSplashScreen   │
+├──────────────────┤
+│clearMessage      │
+│drawContents      │
+│finish            │
+│message           │
+│messageChanged    │
+│pixmap            │
+│setPixmap         │
+│showMessage       │
+└──────────────────┘
+
+
+┌─────────────────────────┐┌───────────────────────┐┌────────────┐
+│        QStatusBar       ││    QSplitterHandle    ││ QSizeGrip  │
+├─────────────────────────┤├───────────────────────┤├────────────┤
+│addPermanentWidget       ││closestLegalPosition   │└────────────┘
+│addWidget                ││moveSplitter           │
+│clearMessage             ││opaqueResize           │
+│currentMessage           ││orientation            │
+│hideOrShow               ││setOrientation         │
+│insertPermanentWidget    ││splitter               │
+│insertWidget             │└───────────────────────┘
+│isSizeGripEnabled        │┌──────────────────┐
+│messageChanged           ││   QRubberBand    │
+│reformat                 │├──────────────────┤
+│removeWidget             ││Line              │
+│setSizeGripEnabled       ││Rectangle         │
+│showMessage              ││Shape             │
+└─────────────────────────┘│initStyleOption   │
+                           │shape             │
+                           └──────────────────┘
+                           
+
+
+
+
+
+
+┌─────────────────────────────────────────────┐
+│                 QWizardPage                 │
+├─────────────────────────────────────────────┤
+│buttonText       nextId         setSubTitle  │
+│cleanupPage      pixmap         setTitle     │
+│completeChanged  registerField  subTitle     │
+│field            setButtonText  title        │
+│initializePage   setCommitPage  validatePage │
+│isCommitPage     setField       wizard       │
+│isComplete       setFinalPage                │
+│isFinalPage      setPixmap                   │
+└─────────────────────────────────────────────┘
+
+
+║
+║
+║
+║
+║
+║
+║
+║
+║
+║
+║
+║
+║
+║
+╚══End QWidget 
+# ┌──────────────���─────── #pg 9 [553-621]═════════════�
+C:\Users\kgolcyns\Qt Python Textbook\Class Explorer 2>
+
+
+
+┌─────────────── the junk that vscode would let me paste side by size (like paper)
+Ted Nelson said the PUI was a paper simulater, but it was dummed down paper:
+Example: I cant write on this, I can't put two boxes next to each other, I can't even
+move the cursor to the end of the line, which MS Dos's 16Bit Edit could do.
+┌────────────────────────────────────────────────────────────┐   ┌────────────────┐
+│                           QFrame                           │   │  QFocusFrame   │
+├────────────────────────────────────────────────────────────┤   ├────────────────┤
+│Box          Shape        frameRect        setFrameRect     │   │initStyleOption │
+│HLine        Shape_Mask   frameShadow      setFrameShadow   │   │setWidget       │
+│NoFrame      StyleMask    frameShape       setFrameShape    │   │widget          │
+│Panel        StyledPanel  frameStyle       setFrameStyle    │   └────────────────┘
+│Plain        Sunken       frameWidth       setLineWidth     │
+│Raised       VLine        initStyleOption  setMidLineWidth  │
+│Shadow       WinPanel     lineWidth                         │
+│Shadow_Mask  drawFrame    midLineWidth                      │
+└────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────┐   ┌────────────────────────────────────────┐
+│                 QDockWidget                 │   │             QDesktopWidget             │
+├─────────────────────────────────────────────┤   ├────────────────────────────────────────┤
+│AllDockWidgetFeatures       initStyleOption  │   │availableGeometry     screenCount       │
+│DockWidgetClosable          isAreaAllowed    │   │isVirtualDesktop      screenCountChanged│
+│DockWidgetFeature           isFloating       │   │primaryScreen         screenGeometry    │
+│DockWidgetFeatures          setAllowedAreas  │   │primaryScreenChanged  screenNumber      │
+│DockWidgetFloatable         setFeatures      │   │resized               workAreaResized   │
+│DockWidgetMovable           setFloating      │   │screen                                  │
+│DockWidgetVerticalTitleBar  setTitleBarWidget│   └────────────────────────────────────────┘
+│NoDockWidgetFeatures        setWidget        │
+│allowedAreas                titleBarWidget   │
+│allowedAreasChanged         toggleViewAction │
+│dockLocationChanged         topLevelChanged  │
+│features                    visibilityChanged│
+│featuresChanged             widget           │
+└─────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────┐    ┌──────────────────────────────────────────────────┐
+│                 QAbstractSlider                  │    │                 QAbstractSpinBox                 │
+├──────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────┤
+│SliderAction             repeatAction             │    │ButtonSymbols           isReadOnly                │
+│SliderChange             setInvertedAppearance    │    │CorrectToNearestValue   keyboardTracking          │
+│SliderMove               setInvertedControls      │    │CorrectToPreviousValue  lineEdit                  │
+│SliderNoAction           setMaximum               │    │CorrectionMode          selectAll                 │
+│SliderOrientationChange  setMinimum               │    │NoButtons               setAccelerated            │
+│SliderPageStepAdd        setOrientation           │    │PlusMinus               setAlignment              │
+│SliderPageStepSub        setPageStep              │    │StepDownEnabled         setButtonSymbols          │
+│SliderRangeChange        setRange                 │    │StepEnabled             setCorrectionMode         │
+│SliderSingleStepAdd      setRepeatAction          │    │StepEnabledFlag         setFrame                  │
+│SliderSingleStepSub      setSingleStep            │    │StepNone                setGroupSeparatorShown    │
+│SliderStepsChange        setSliderDown            │    │StepUpEnabled           setKeyboardTracking       │
+│SliderToMaximum          setSliderPosition        │    │UpDownArrows            setLineEdit               │
+│SliderToMinimum          setTracking              │    │alignment               setReadOnly               │
+│SliderValueChange        setValue                 │    │buttonSymbols           setSpecialValueText       │
+│actionTriggered          singleStep               │    │clear                   setWrapping               │
+│hasTracking              sliderChange             │    │correctionMode          specialValueText          │
+│invertedAppearance       sliderMoved              │    │editingFinished         stepBy                    │
+│invertedControls         sliderPosition           │    │fixup                   stepDown                  │
+│isSliderDown             sliderPressed            │    │hasAcceptableInput      stepEnabled               │
+│maximum                  sliderReleased           │    │hasFrame                stepUp                    │
+│minimum                  triggerAction            │    │initStyleOption         text                      │
+│orientation              value                    │    │interpretText           validate                  │
+│pageStep                 valueChanged             │    │isAccelerated           wrapping                  │
+│rangeChanged                                      │    │isGroupSeparatorShown                             │
+└──────────────────────────────────────────────────┘    └──────────────────────────────────────────────────┘
+
+

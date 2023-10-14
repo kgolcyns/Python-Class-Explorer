@@ -33,18 +33,26 @@ class SubclassDiagram:
             MASTER_TABLE.append(blocks)
         
         ## Print MASTER_TABLE
-        title =  f"""{self.parent.__name__}
-             ╽            
-            ╱ ╲
-           ╱   ╲
-             │
-             │
-        """
-        print(title)
+        print('')
+        title = ' ' + self.parent.__name__ +' '
+        titleWidth = len(title)
+        titleTop = '╔' + titleWidth*'═' + '╗'
+        titleBottom = '╚' + titleWidth*'═' + '╝'
+        
+        titleBlock = f"""
+{titleTop}
+║{title}║
+{titleBottom}
+    ╱╲
+   ╱  ╲
+    ││
+    ││
+"""
+        print(titleBlock)
         for diagram in MASTER_TABLE:
             print('\n'.join(diagram))
             print('\n')
-        print('\n\n')
+        print(f'╚══End {self.parent.__name__}\n\n')
             
     @staticmethod
     def sort(x): x=x; x.sort(); return x
@@ -148,7 +156,10 @@ Notes
 'light_bar_box_x2' : '╔═╗║╝═╚║'
 
 """
+
 if __name__ == '__main__':
+    import os
+    os.system("")
     d = SubclassDiagram(QAbstractButton)
     d.run(QRadioButton=25, QCheckBox=25, QPushButton=25, QToolButton=40)
     #frame = SubclassDiagram(QFrame)
