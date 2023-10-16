@@ -1,0 +1,196 @@
+╔═════════════╗
+║ QPushButton ║
+╚═════════════╝
+┌────────────────────┐
+│ QCommandLinkButton │
+├────────────────────┤
+│description         │
+│setDescription      │
+└────────────────────┘
+╚══End QPushButton
+
+╔═════════╗
+║ QDialog ║
+╚═════════╝
+┌────────────────────────────────────────┐
+│              QColorDialog              │
+├────────────────────────────────────────┤
+│ColorDialogOption    getColor           │
+│ColorDialogOptions   options            │
+│DontUseNativeDialog  selectedColor      │
+│NoButtons            setCurrentColor    │
+│ShowAlphaChannel     setCustomColor     │
+│colorSelected        setOption          │
+│currentColor         setOptions         │
+│currentColorChanged  setStandardColor   │
+│customColor          standardColor      │
+│customCount          testOption         │
+└────────────────────────────────────────┘
+┌────────────────────┐
+│   QErrorMessage    │
+├────────────────────┤
+│qtHandler           │
+│showMessage         │
+└────────────────────┘
+# Printing optimized for TextMate.app default printing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                  QFileDialog                                   │
+├────────────────────────────────────────────────────────────────────────────────┤
+│Accept                       defaultSuffix            selectNameFilter          │
+│AcceptMode                   directory                selectUrl                 │
+│AcceptOpen                   directoryEntered         selectedFiles             │
+│AcceptSave                   directoryUrl             selectedMimeTypeFilter    │
+│AnyFile                      directoryUrlEntered      selectedNameFilter        │
+│Detail                       fileMode                 selectedUrls              │
+│DialogLabel                  fileSelected             setAcceptMode             │
+│Directory                    filesSelected            setDefaultSuffix          │
+│DirectoryOnly                filter                   setDirectory              │
+│DontConfirmOverwrite         filterSelected           setDirectoryUrl           │
+│DontResolveSymlinks          getExistingDirectory     setFileMode               │
+│DontUseCustomDirectoryIcons  getExistingDirectoryUrl  setFilter                 │
+│DontUseNativeDialog          getOpenFileName          setHistory                │
+│DontUseSheet                 getOpenFileNames         setIconProvider           │
+│ExistingFile                 getOpenFileUrl           setItemDelegate           │
+│ExistingFiles                getOpenFileUrls          setLabelText              │
+│FileMode                     getSaveFileName          setMimeTypeFilters        │
+│FileName                     getSaveFileUrl           setNameFilter             │
+│FileType                     history                  setNameFilters            │
+│HideNameFilterDetails        iconProvider             setOption                 │
+│List                         itemDelegate             setOptions                │
+│LookIn                       labelText                setProxyModel             │
+│Option                       mimeTypeFilters          setSidebarUrls            │
+│Options                      nameFilters              setSupportedSchemes       │
+│ReadOnly                     options                  setViewMode               │
+│Reject                       proxyModel               sidebarUrls               │
+│ShowDirsOnly                 restoreState             supportedSchemes          │
+│ViewMode                     saveFileContent          testOption                │
+│acceptMode                   saveState                urlSelected               │
+│currentChanged               selectFile               urlsSelected              │
+│currentUrlChanged            selectMimeTypeFilter     viewMode                  │
+└────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────┐
+│              QFontDialog               │
+├────────────────────────────────────────┤
+│DontUseNativeDialog  currentFontChanged │
+│FontDialogOption     fontSelected       │
+│FontDialogOptions    getFont            │
+│MonospacedFonts      options            │
+│NoButtons            selectedFont       │
+│NonScalableFonts     setCurrentFont     │
+│ProportionalFonts    setOption          │
+│ScalableFonts        setOptions         │
+│currentFont          testOption         │
+└────────────────────────────────────────┘
+
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│                             QInputDialog                             │
+├──────────────────────────────────────────────────────────────────────┤
+│DoubleInput                   getItem              setDoubleRange     │
+│InputDialogOption             getMultiLineText     setDoubleStep      │
+│InputDialogOptions            getText              setDoubleValue     │
+│InputMode                     inputMode            setInputMode       │
+│IntInput                      intMaximum           setIntMaximum      │
+│NoButtons                     intMinimum           setIntMinimum      │
+│TextInput                     intStep              setIntRange        │
+│UseListViewForComboBoxItems   intValue             setIntStep         │
+│UsePlainTextEditForTextInput  intValueChanged      setIntValue        │
+│cancelButtonText              intValueSelected     setLabelText       │
+│comboBoxItems                 isComboBoxEditable   setOkButtonText    │
+│doubleDecimals                labelText            setOption          │
+│doubleMaximum                 okButtonText         setOptions         │
+│doubleMinimum                 options              setTextEchoMode    │
+│doubleStep                    setCancelButtonText  setTextValue       │
+│doubleValue                   setComboBoxEditable  testOption         │
+│doubleValueChanged            setComboBoxItems     textEchoMode       │
+│doubleValueSelected           setDoubleDecimals    textValue          │
+│getDouble                     setDoubleMaximum     textValueChanged   │
+│getInt                        setDoubleMinimum     textValueSelected  │
+└──────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                  QMessageBox                                   │
+├────────────────────────────────────────────────────────────────────────────────┤
+│Abort            InvalidRole      Yes              question                     │
+│AcceptRole       LastButton       YesAll           removeButton                 │
+│ActionRole       No               YesRole          setCheckBox                  │
+│Apply            NoAll            YesToAll         setDefaultButton             │
+│ApplyRole        NoButton         about            setDetailedText              │
+│ButtonMask       NoIcon           aboutQt          setEscapeButton              │
+│ButtonRole       NoRole           addButton        setIcon                      │
+│Cancel           NoToAll          button           setIconPixmap                │
+│Close            Ok               buttonClicked    setInformativeText           │
+│Critical         Open             buttonRole       setStandardButtons           │
+│Default          Question         buttons          setText                      │
+│DestructiveRole  RejectRole       checkBox         setTextFormat                │
+│Discard          Reset            clickedButton    setTextInteractionFlags      │
+│Escape           ResetRole        critical         standardButton               │
+│FirstButton      RestoreDefaults  defaultButton    standardButtons              │
+│FlagMask         Retry            detailedText     standardIcon                 │
+│Help             Save             escapeButton     text                         │
+│HelpRole         SaveAll          icon             textFormat                   │
+│Icon             StandardButton   iconPixmap       textInteractionFlags         │
+│Ignore           StandardButtons  information      warning                      │
+│Information      Warning          informativeText                               │
+└────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                QProgressDialog                                 │
+├────────────────────────────────────────────────────────────────────────────────┤
+│autoClose  labelText        setAutoClose         setLabel            setRange   │
+│autoReset  maximum          setAutoReset         setLabelText        setValue   │
+│cancel     minimum          setBar               setMaximum          value      │
+│canceled   minimumDuration  setCancelButton      setMinimum          wasCanceled│
+│forceShow  reset            setCancelButtonText  setMinimumDuration             │
+└────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                    QWizard                                     │
+├────────────────────────────────────────────────────────────────────────────────┤
+│AeroStyle                     NoBackButtonOnStartPage   pageIds                 │
+│BackButton                    NoCancelButton            pageRemoved             │
+│BackgroundPixmap              NoCancelButtonOnLastPage  pixmap                  │
+│BannerPixmap                  NoDefaultButton           removePage              │
+│CancelButton                  Stretch                   restart                 │
+│CancelButtonOnLeft            WatermarkPixmap           setButton               │
+│ClassicStyle                  WizardButton              setButtonLayout         │
+│CommitButton                  WizardOption              setButtonText           │
+│CustomButton1                 WizardOptions             setDefaultProperty      │
+│CustomButton2                 WizardPixmap              setField                │
+│CustomButton3                 WizardStyle               setOption               │
+│DisabledBackButtonOnLastPage  addPage                   setOptions              │
+│ExtendedWatermarkPixmap       back                      setPage                 │
+│FinishButton                  button                    setPixmap               │
+│HaveCustomButton1             buttonText                setSideWidget           │
+│HaveCustomButton2             cleanupPage               setStartId              │
+│HaveCustomButton3             currentId                 setSubTitleFormat       │
+│HaveFinishButtonOnEarlyPages  currentIdChanged          setTitleFormat          │
+│HaveHelpButton                currentPage               setWizardStyle          │
+│HaveNextButtonOnLastPage      customButtonClicked       sideWidget              │
+│HelpButton                    field                     startId                 │
+│HelpButtonOnRight             hasVisitedPage            subTitleFormat          │
+│IgnoreSubTitles               helpRequested             testOption              │
+│IndependentPages              initializePage            titleFormat             │
+│LogoPixmap                    next                      validateCurrentPage     │
+│MacStyle                      nextId                    visitedIds              │
+│ModernStyle                   options                   visitedPages            │
+│NextButton                    page                      wizardStyle             │
+│NoBackButtonOnLastPage        pageAdded                                         │
+└────────────────────────────────────────────────────────────────────────────────┘
+╚══End QDialog
+# Printing optimized for TextMate.app default printing

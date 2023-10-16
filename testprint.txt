@@ -1,0 +1,25 @@
+# Testing printing devices
+
+>>> for x in UMLDiagramer(QDialog,25,seperate_callable=True): print(x)
+... 
+┌─────────────────────────┐
+│         QDialog         │
+├─────────────────────────┤
+│DialogCode()             │
+│accept()                 │
+│accepted()               │
+│done()                   │
+│exec()                   │
+│exec_()                  │
+│finished()               │
+│isSizeGripEnabled()      │
+│open()                   │
+│reject()                 │
+│rejected()               │
+│result()                 │
+│setModal()               │
+│setResult()              │
+│setSizeGripEnabled()     │
+├─────────────────────────┤
+│Accepted  Rejected       │
+└─────────────────────────┘

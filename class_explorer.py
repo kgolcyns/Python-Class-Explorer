@@ -3,6 +3,100 @@
 from PyQt5.QtWidgets import *
 #from class_explorer import (sort, unique_methods, autocolumnize, list)
 
+class BoxCharacters:
+    horizontal   ='─'
+    vertical     ='│'
+    topleft      ='┌'
+    topright     ='┐'
+    bottomleft   ='└'
+    bottomright  ='┘'
+    verticalleft ='├'
+    verticalright='┤'
+
+class BoxDiagram(BoxCharacters):
+    def drawTitle(self, name, width):
+        lines = [
+            self.topleft + self.horizontal*width + self.topright,
+            self.vertical + name.center(width) + self.vertical
+        ]
+        return lines
+        
+    def drawBody(self, items, width):
+        lines = []
+        for line in items:
+            line = line.rstrip('\n').ljust(width, ' ') #Todo: Decide responsiblity of rstrip \n or not
+            line = self.vertical + line + self.vertical
+            lines.append(line)
+        return lines
+        
+    def drawFooter(self, width):
+        return [self.bottomleft + self.horizontal*width + self.bottomright]
+        
+    def drawDivider(self, width):
+        return [self.verticalleft + self.horizontal*width + self.verticalright]
+
+def sort(x): x=x; x.sort(); return x
+
+def methodGenerator(subclass, parents=None, width=80):
+    if parents == None:
+        bases = subclass.__bases__
+    else:
+        """"Supposed to take list of custom parents
+        or some custom logic too complicated for now"""
+        bases = parents
+        #raise NotImplemented
+    bases_methods = [set(dir(obj)) for obj in bases]
+    combined_bases_methods = set.union(*bases_methods)
+    
+    subclass_methods = set(dir(subclass))
+    
+    # Check that parent class is subset of subclass
+    if not combined_bases_methods.issubset(subclass_methods) and not ignore_validation:
+        raise ValueError("Parent class is not a subset of subclass")
+    
+    return list(subclass_methods.difference(combined_bases_methods))
+
+def UMLDiagramer(Class, width=80, parents=None, seperate_callable=True, annotate_callable='()'):
+    """Super function combining multiple sub functions returning list that
+    can immediately be printed or copied"""
+    # NOTE: \n stripping is handled by drawer for now, since list_columnize always adds it
+    methods = methodGenerator(Class, parents=parents, width=width)
+    methods.sort()
+    drawer = BoxDiagram()
+    #drawer.drawTitle(Class.__name__, width)
+    
+    # draw callables first then seperate box for attributes
+    # if that features is specified, (callables have annotated())
+    if seperate_callable:
+        attributes = []
+        functions = []
+        for method in methods:
+            if callable(getattr(Class, method)):
+                functions.append(method+annotate_callable)
+            else:
+                attributes.append(method)
+        body1 = drawer.drawBody(SubclassDiagram.list_columnize(functions, width), width)
+        body2 = drawer.drawBody(SubclassDiagram.list_columnize(attributes, width), width)
+        body = body1 + drawer.drawDivider(width) + body2
+    else:
+        #TODO: add annotated to not seperate callable
+        method_attributes = []
+        for method in methods:
+            if callable(getattr(Class, method)):
+                method_attributes.append(method+annotate_callable)
+            else:
+                method_attributes.append(method)
+        body = drawer.drawBody(SubclassDiagram.list_columnize(method_attributes, width), width)
+    
+    title = drawer.drawTitle(str(Class.__name__), width)
+    divider = drawer.drawDivider(width)
+    footer = drawer.drawFooter(width)
+    
+    return title + divider + body + footer
+    
+     
+    
+        
 class SubclassDiagram:
     def __init__(self, parent, width=80):
         self.width = 80 # Default width
