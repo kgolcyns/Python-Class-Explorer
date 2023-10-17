@@ -37,7 +37,7 @@ class BoxDiagram(BoxCharacters):
 
 def sort(x): x=x; x.sort(); return x
 
-def methodGenerator(subclass, parents=None, width=80):
+def methodGenerator(subclass, parents=None, width=80, ignore_validation=False):
     if parents == None:
         bases = subclass.__bases__
     else:
@@ -56,11 +56,11 @@ def methodGenerator(subclass, parents=None, width=80):
     
     return list(subclass_methods.difference(combined_bases_methods))
 
-def UMLDiagramer(Class, width=80, parents=None, seperate_callable=True, annotate_callable='()'):
+def UMLDiagramer(Class, width=80, parents=None, seperate_callable=True, annotate_callable='()', ignore_validation=False):
     """Super function combining multiple sub functions returning list that
     can immediately be printed or copied"""
     # NOTE: \n stripping is handled by drawer for now, since list_columnize always adds it
-    methods = methodGenerator(Class, parents=parents, width=width)
+    methods = methodGenerator(Class, parents=parents, width=width, ignore_validation=ignore_validation)
     methods.sort()
     drawer = BoxDiagram()
     #drawer.drawTitle(Class.__name__, width)
@@ -72,7 +72,11 @@ def UMLDiagramer(Class, width=80, parents=None, seperate_callable=True, annotate
         functions = []
         for method in methods:
             if callable(getattr(Class, method)):
-                functions.append(method+annotate_callable)
+                if annotate_callable == 'doc': # for PyQt5 with attributes
+                    doc = getattr(Class, method).__doc__
+                    functions.append(str(doc) if not doc is None else method)
+                else:
+                    functions.append(method+annotate_callable)
             else:
                 attributes.append(method)
         body1 = drawer.drawBody(SubclassDiagram.list_columnize(functions, width), width)
@@ -83,7 +87,11 @@ def UMLDiagramer(Class, width=80, parents=None, seperate_callable=True, annotate
         method_attributes = []
         for method in methods:
             if callable(getattr(Class, method)):
-                method_attributes.append(method+annotate_callable)
+                if annotate_callable == 'doc': # for PyQt5 with attributes
+                    doc = getattr(Class, method).__doc__
+                    method_attributes.append(str(doc) if not doc is None else method)
+                else:
+                    method_attributes.append(method+annotate_callable)
             else:
                 method_attributes.append(method)
         body = drawer.drawBody(SubclassDiagram.list_columnize(method_attributes, width), width)
